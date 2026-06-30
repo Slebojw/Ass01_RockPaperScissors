@@ -7,7 +7,7 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             playAgain = "Y";
             String playerAChoice;
-
+//random comment
             do {
                 System.out.println("Player A Choice either R(rock), P(paper), or S(Scissors)");
                 playerAChoice = scanner.nextLine().toUpperCase();
