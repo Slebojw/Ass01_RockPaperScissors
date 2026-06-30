@@ -6,10 +6,36 @@ public class Main {
         do {
             Scanner scanner = new Scanner(System.in);
             playAgain = "Y";
-            System.out.println("Player A Choice either R(rock), P(paper), or S(Scissors)");
-            String playerAChoice = scanner.nextLine();
-            System.out.println("Player B Choice either R(rock), P(paper), or S(Scissors)");
-            String playerBChoice = scanner.nextLine();
+            String playerAChoice;
+
+            do {
+                System.out.println("Player A Choice either R(rock), P(paper), or S(Scissors)");
+                playerAChoice = scanner.nextLine().toUpperCase();
+
+                if (!playerAChoice.equals("R") &&
+                        !playerAChoice.equals("P") &&
+                        !playerAChoice.equals("S")) {
+                    System.out.println("Invalid choice! Please enter R, P, or S.");
+                }
+
+            } while (!playerAChoice.equals("R") &&
+                    !playerAChoice.equals("P") &&
+                    !playerAChoice.equals("S"));
+            String playerBChoice;
+
+            do {
+                System.out.println("Player B Choice either R(rock), P(paper), or S(Scissors)");
+                playerBChoice = scanner.nextLine().toUpperCase();
+
+                if (!playerBChoice.equals("R") &&
+                        !playerBChoice.equals("P") &&
+                        !playerBChoice.equals("S")) {
+                    System.out.println("Invalid choice! Please enter R, P, or S.");
+                }
+
+            } while (!playerBChoice.equals("R") &&
+                    !playerBChoice.equals("P") &&
+                    !playerBChoice.equals("S"));
             if (playerBChoice.equals(playerAChoice)) {
                 System.out.println("It's a tie!");
             } else if (playerAChoice.equals("R") && playerBChoice.equals("S")) {
